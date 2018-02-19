@@ -1,0 +1,3 @@
+rootProject.name = 'dune_mobile'
+
+include ':app'
