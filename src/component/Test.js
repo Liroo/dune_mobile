@@ -1,5 +1,5 @@
 /**
- * Sample React Native App
+ * Sample React Native Test
  * https://github.com/facebook/react-native
  * @flow
  */
@@ -20,7 +20,7 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class Test extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -28,7 +28,7 @@ export default class App extends Component<Props> {
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit App.js
+          To get started, edit Test.js
         </Text>
         <Text style={styles.instructions}>
           {instructions}
