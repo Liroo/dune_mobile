@@ -10,7 +10,12 @@
     "babel-plugin-module-alias": "^1.6.0",
     "react": "16.2.0",
     "react-native": "0.53.2",
-    "react-native-navigation": "^1.1.382"
+    "react-native-ble-plx": "^0.8.0",
+    "react-native-navigation": "^1.1.382",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-jest": "22.2.2",

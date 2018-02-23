@@ -1,7 +1,7 @@
 import { Navigation } from 'react-native-navigation';
 
-import Test from 'component/Test';
+import Entry from 'component/Entry';
 
-export function registerScreens() {
-  Navigation.registerComponent('dune.test', () => Test);
+export function registerScreens(store, provider) {
+  Navigation.registerComponent('dune.entry', () => Entry, store, provider);
 }

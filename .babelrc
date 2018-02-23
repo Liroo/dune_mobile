@@ -5,6 +5,7 @@
        "module-alias", [
          { "src": "./src", "expose": "src" },
          { "src": "./src/component", "expose": "component" },
+         { "src": "./src/flux", "expose": "flux" },
        ]
     ]
   ]
