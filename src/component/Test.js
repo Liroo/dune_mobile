@@ -4,24 +4,15 @@ import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 
 type Props = {};
-class Entry extends Component<Props> {
+class Test extends Component<Props> {
 
   render() {
     return (
       <View>
         <Text>
-        BONJOUR
+        BONSOIR
         </Text>
       </View>
     );
   }
-
 }
-
-function getFromStore(appState: indexReducerType) {
-  return {
-    managerStatus: appState.ble.managerStatus,
-  };
-}
-
-export default connect(getFromStore, null)(Entry);
