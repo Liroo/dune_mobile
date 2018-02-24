@@ -5,5 +5,5 @@ import Test from 'component/Test';
 
 export function registerScreens(store, provider) {
   Navigation.registerComponent('dune.entry', () => Entry, store, provider);
-  Navigation.registerComponent('dune.test', () => Test);
+  Navigation.registerComponent('dune.test', () => Test, store, provider);
 }

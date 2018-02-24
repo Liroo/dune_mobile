@@ -15,4 +15,5 @@ class Test extends Component<Props> {
       </View>
     );
   }
+
 }
