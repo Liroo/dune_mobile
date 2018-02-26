@@ -5,11 +5,6 @@ const initialState = {
 	managerStatus: bleType.BLE_STATE_UNKNOWN,
 };
 
-/*
-  TODO
-  Create action to remove properly notifier managerhandler when app is going to be killed or shutdown
-*/
-
 export default function session(state = initialState, action = {}) {
 	switch (action.type) {
 
