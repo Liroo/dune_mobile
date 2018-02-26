@@ -9,25 +9,11 @@ import * as bleType from 'flux/ble/bleType';
   but I'm really not sure this is the solution, maybe this is a default behavior?
 */
 
-export function initBle(manager) {
+export function changeBleState(state) {
   return async function (dispatch, getState) {
     dispatch({
-			type: bleTypeAction.BLE_MANAGER_STATUS_CHANGE,
-      managerStatus: bleType.BLE_MANAGER_STATUS_UNKNOWN,
-		});
-
-    /*
-      TODO FixIt
-
-      subscription is actually undefined ending, this is not really a problem as the bluetooth notifier
-      could run the whole lifetime of the app.. anyway we should care if there is any memory leak or unwanted behavior with this trick
-    */
-    manager.onStateChange((state) => {
-      dispatch({
-        type: bleTypeAction.BLE_MANAGER_STATUS_CHANGE,
-        managerStatus: `ble.manager.status.${state.toLowerCase()}`,
-      });
-    }, true);
-
+      type: bleTypeAction.BLE_MANAGER_STATUS_CHANGE,
+      managerStatus: `ble.manager.status.${state.toLowerCase()}`,
+    });
   }
 }
