@@ -7,6 +7,8 @@ const Colors = {
 
   WHITE: '#FFFFFF',
 
+  BLUETOOTH_ON: '#2196F3',
+
   DIVIDER: '#E7E7E7',
 };
 

@@ -17,3 +17,19 @@ export function changeBleState(state) {
     });
   }
 }
+
+export function startScan() {
+  return async function (dispatch, getState) {
+    dispatch({
+      type: bleTypeAction.BLE_SCAN_START,
+    });
+  }
+}
+
+export function stopScan() {
+  return async function (dispatch, getState) {
+    dispatch({
+      type: bleTypeAction.BLE_SCAN_STOP,
+    });
+  }
+}
