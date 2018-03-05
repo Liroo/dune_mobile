@@ -30,8 +30,8 @@ export default class App {
     */
     Navigation.startSingleScreenApp({
       screen: {
-        screen: 'dune.entry',
-        title: 'Entry',
+        screen: 'dune.game',
+        title: 'Liste des jeux',
       },
     });
   }
