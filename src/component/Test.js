@@ -14,6 +14,7 @@ import GridView from 'react-native-super-grid';
 import { AppRegistry, Image } from 'react-native';
 
 import {
+  TouchableHighlight,
   Platform,
   StyleSheet,
   Text,
@@ -108,10 +109,12 @@ export default class Test extends Component<Props> {
         style={styles.gridView}
         renderItem={item => (
           <View style={[styles.itemContainer, { backgroundColor: item.code }]}>
+          <TouchableHighlight onPress={()=>/*Ajouter ton truc ici*/)}>
             <Image
               style={{width: 50, height: 50, borderRadius: 20, marginLeft: 17, marginBottom: 10}}
               source={{uri: 'https://cdn.local.epitech.eu/userprofil/commentview/florian.maisonnave.jpg'}}
             />
+          </TouchableHighlight>
             <Text style={styles.itemName}>{item.name}</Text>
           </View>
         )}
