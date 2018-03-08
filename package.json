@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "babel-plugin-module-alias": "^1.6.0",
+    "prop-types": "^15.6.1",
     "react": "16.2.0",
     "react-native": "0.53.2",
     "react-native-ble-plx": "^0.8.0",
@@ -16,8 +17,8 @@
     "react-native-navigation": "^1.1.382",
     "react-native-super-grid": "^2.0.2",
     "react-native-svg": "^6.2.2",
-    "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.4.0",
+    "react-native-vector-icons": "^4.5.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",

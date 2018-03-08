@@ -7,6 +7,7 @@ import com.reactnativenavigation.NavigationApplication;
 
 import com.polidea.reactnativeble.BlePackage;
 import com.horcrux.svg.SvgPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import java.util.List;
 import java.util.Arrays;
@@ -24,6 +25,7 @@ public class MainApplication extends NavigationApplication {
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
             new BlePackage(),
+            new VectorIconsPackage(),
             new SvgPackage()
         );
     }

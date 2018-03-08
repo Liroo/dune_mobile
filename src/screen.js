@@ -9,6 +9,7 @@ import Follow from 'component/follow/Follow';
 import Profile from 'component/profile/Profile';
 import Game from 'component/game/Game';
 
+
 export function registerScreens(store, provider) {
   Navigation.registerComponent('dune.entry', () => Entry, store, provider);
   Navigation.registerComponent('dune.drawer', () => Drawer, store, provider);
