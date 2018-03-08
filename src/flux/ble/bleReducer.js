@@ -3,12 +3,8 @@ import * as bleType from 'flux/ble/bleType';
 
 const initialState = {
 	managerStatus: bleType.BLE_STATE_UNKNOWN,
+	scanStatus: bleType.BLE_SCAN_STATUS_STOP,
 };
-
-/*
-  TODO
-  Create action to remove properly notifier managerhandler when app is going to be killed or shutdown
-*/
 
 export default function session(state = initialState, action = {}) {
 	switch (action.type) {
@@ -20,6 +16,18 @@ export default function session(state = initialState, action = {}) {
 			return {
 				...state,
 				managerStatus: action.managerStatus,
+			};
+
+		case bleTypeAction.BLE_SCAN_START:
+			return {
+				...state,
+				scanStatus: bleType.BLE_SCAN_STATUS_START,
+			};
+
+		case bleTypeAction.BLE_SCAN_STOP:
+			return {
+				...state,
+				scanStatus: bleType.BLE_SCAN_STATUS_STOP,
 			};
 
 		default:

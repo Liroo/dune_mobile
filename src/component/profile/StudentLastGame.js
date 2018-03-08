@@ -14,7 +14,7 @@ const _renderItem = ({ item }) => (
 
 UserRow = props => (
   <View style={styles.row}>
-    <Image style={styles.picture} source={require('../img/compte.png')}/>
+    <Image style={styles.picture} source={require('image/compte.png')}/>
     <View>
       <Text style={styles.primaryText}>
         {props.name}

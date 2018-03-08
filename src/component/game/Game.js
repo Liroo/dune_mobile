@@ -3,13 +3,18 @@ import {View, Text, StyleSheet} from 'react-native';
 import GameList from 'component/game/Gamelist'
 
 export default class Game extends Component {
+
+  static navigatorButtons = {
+    leftButtons: [
+      {
+        id: 'sideMenu',
+      },
+    ]
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.title}>
-          <Text style={styles.titleText}>Bluetooth</Text>
-        </View>
-        <View style={styles.bluetooth} />
         <View style={styles.title}>
           <Text style={styles.titleText}>Jeux disponibles</Text>
         </View>
@@ -36,13 +41,6 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 20
   },
-  bluetooth: {
-    flex: 1,
-    backgroundColor: "#fff",
-    borderRadius:10,
-    marginLeft:20,
-    marginRight:20
-    },
   gameList: {
     flex: 2,
     backgroundColor: '#e5e5e5',

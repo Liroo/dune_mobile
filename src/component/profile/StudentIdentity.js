@@ -10,7 +10,7 @@ export default class studentIdentity extends Component {
       <View style={styles.parentView}>
           <View style={{width: 100, height: 50, flexDirection: 'row'}}>
             <Image
-              source={require('../img/flo.jpg')}
+              source={require('image/flo.jpg')}
                style={styles.buttonText}
             />
           </View>

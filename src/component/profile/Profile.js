@@ -13,31 +13,39 @@ import {PagerTabIndicator, IndicatorViewPager, PagerTitleIndicator, PagerDotIndi
 
 export default class Profile extends Component {
 
+  static navigatorButtons = {
+    leftButtons: [
+      {
+        id: 'sideMenu',
+      },
+    ]
+  };
+
   _renderTitleIndicator() {
          return <PagerTitleIndicator titles={['one', 'two', 'three']} />;
      }
 
-     _renderDotIndicator() {
-         return <PagerDotIndicator pageCount={3} />;
-     }
+  _renderDotIndicator() {
+     return <PagerDotIndicator pageCount={3} />;
+  }
 
-     _renderTabIndicator() {
-         let tabs = [{
-                 text: 'Profil',
-                 iconSource: require('../img/user.png'),
-                 selectedIconSource: require('../img/user.png')
-             },{
-                 text: 'Statidtiques',
-                 iconSource: require('../img/user.png'),
-                 selectedIconSource: require('../img/user.png')
-             },{
-                 text: 'Derniers jeux',
-                 iconSource: require('../img/user.png'),
-                 selectedIconSource: require('../img/user.png')
+  _renderTabIndicator() {
+     let tabs = [{
+             text: 'Profil',
+             iconSource: require('image/user.png'),
+             selectedIconSource: require('image/user.png')
+         },{
+             text: 'Statidtiques',
+             iconSource: require('image/user.png'),
+             selectedIconSource: require('image/user.png')
+         },{
+             text: 'Derniers jeux',
+             iconSource: require('image/user.png'),
+             selectedIconSource: require('image/user.png')
 
-         }];
-         return <PagerTabIndicator tabs={tabs} />;
-     }
+     }];
+     return <PagerTabIndicator tabs={tabs} />;
+  }
 
   render() {
     return (

@@ -18,7 +18,7 @@ const renderItem = ({ item }) => (
 
 CommentRow = props => (
   <View style={styles.row}>
-    <Image style={styles.picture} source={require('../img/gadrat.jpg')}/>
+    <Image style={styles.picture} source={require('image/gadrat.jpg')}/>
     <View>
       <Text style={styles.primaryText}>
         {props.name}

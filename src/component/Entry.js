@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { View, Text, StyleSheet } from 'react-native';
 
-import { View, Text } from 'react-native';
+import TableCard from 'component/table/TableCard';
 
-type Props = {};
-class Entry extends Component<Props> {
+const styles = StyleSheet.create({
+  rootContainer: {
+    flex: 1,
+  },
+});
+
+class Entry extends Component {
+
+  static navigatorButtons = {
+    leftButtons: [
+      {
+        id: 'sideMenu',
+      },
+    ]
+  };
 
   render() {
     return (
-      <View>
+      <View style={styles.rootContainer}>
+        <TableCard />
         <Text>
-          {this.props.managerStatus}          
+          {this.props.managerStatus}
         </Text>
       </View>
     );
