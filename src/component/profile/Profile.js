@@ -4,14 +4,14 @@ import { AppRegistry, StyleSheet, Text, View, Button, ScrollView, TouchableHighl
 import { Divider } from 'react-native-elements';
 import { Icon } from 'react-native-elements';
 import { VictoryBar, VictoryChart, VictoryTheme } from "victory-native";
-import Identity from './studentIdentity';
-import Charts from './Charts';
-import LastGame from './StudentLastGame';
+import Identity from 'component/profile/StudentIdentity';
+import Charts from 'component/profile/Charts';
+import LastGame from 'component/profile/StudentLastGame';
 import Modal from 'react-native-modal';
-import Comment from './Comments';
+import Comment from 'component/profile/Comments';
 import {PagerTabIndicator, IndicatorViewPager, PagerTitleIndicator, PagerDotIndicator} from 'rn-viewpager';
 
-export default class Follow extends Component {
+export default class Profile extends Component {
 
   _renderTitleIndicator() {
          return <PagerTitleIndicator titles={['one', 'two', 'three']} />;

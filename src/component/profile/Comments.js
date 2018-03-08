@@ -4,9 +4,9 @@ import { AppRegistry, StyleSheet, Text, View, Button, ScrollView, TouchableHighl
 import { Divider } from 'react-native-elements';
 import { Icon } from 'react-native-elements';
 import { VictoryBar, VictoryChart, VictoryTheme } from "victory-native";
-import Identity from './studentIdentity';
-import Charts from './Charts';
-import LastGame from './StudentLastGame';
+import Identity from 'component/profile/StudentIdentity';
+import Charts from 'component/profile/Charts';
+import LastGame from 'component/profile/StudentLastGame';
 import Modal from 'react-native-modal';
 
 const renderItem = ({ item }) => (

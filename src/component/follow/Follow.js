@@ -4,7 +4,6 @@ import { ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import { Icon } from 'react-native-elements';
 import GridView from 'react-native-super-grid';
-import Follow from './Follow';
 import { TouchableHighlight } from 'react-native';
 import { AppRegistry, Image } from 'react-native';
 
@@ -38,7 +37,7 @@ const list = [
   },
 ]
 
-export default class Test extends Component<props> {
+export default class Follow extends Component<props> {
 
 constructor(props){
   super(props);

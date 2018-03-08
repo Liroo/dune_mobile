@@ -6,6 +6,7 @@ import com.facebook.react.ReactPackage;
 import com.reactnativenavigation.NavigationApplication;
 
 import com.polidea.reactnativeble.BlePackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import java.util.List;
 import java.util.Arrays;
@@ -22,7 +23,8 @@ public class MainApplication extends NavigationApplication {
         // Add additional packages you require here
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
-            new BlePackage()
+            new BlePackage(),
+            new VectorIconsPackage()
         );
     }
 
