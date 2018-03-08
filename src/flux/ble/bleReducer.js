@@ -3,6 +3,7 @@ import * as bleType from 'flux/ble/bleType';
 
 const initialState = {
 	managerStatus: bleType.BLE_STATE_UNKNOWN,
+	scanStatus: bleType.BLE_SCAN_STATUS_STOP,
 };
 
 export default function session(state = initialState, action = {}) {
@@ -15,6 +16,18 @@ export default function session(state = initialState, action = {}) {
 			return {
 				...state,
 				managerStatus: action.managerStatus,
+			};
+
+		case bleTypeAction.BLE_SCAN_START:
+			return {
+				...state,
+				scanStatus: bleType.BLE_SCAN_STATUS_START,
+			};
+
+		case bleTypeAction.BLE_SCAN_STOP:
+			return {
+				...state,
+				scanStatus: bleType.BLE_SCAN_STATUS_STOP,
 			};
 
 		default:
