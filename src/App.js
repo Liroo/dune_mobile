@@ -21,8 +21,17 @@ export default class App {
     Navigation.startSingleScreenApp({
       screen: {
         screen: 'dune.entry',
-        title: 'Entry',
+        title: 'Dune',
       },
+      drawer: {
+        left: {
+          screen: 'dune.drawer',
+          fixedWidth: 850,
+        },
+        style: {
+          drawerShadow: true,
+        }
+      }
     });
   }
 }

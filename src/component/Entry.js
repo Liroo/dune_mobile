@@ -10,8 +10,15 @@ const styles = StyleSheet.create({
   },
 });
 
-type Props = {};
-class Entry extends Component<Props> {
+class Entry extends Component {
+
+  static navigatorButtons = {
+    leftButtons: [
+      {
+        id: 'sideMenu',
+      },
+    ]
+  };
 
   render() {
     return (

@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import CustomButton from 'component/global/CustomButton';
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -23,51 +24,14 @@ import {
   BLE_SCAN_STATUS_STOP,
 } from 'flux/ble/bleType';
 
-const styles = StyleSheet.create({
-  cardContainer: {
-    alignSelf: 'stretch',
-    flexDirection: 'row',
-
-    borderBottomWidth: 1,
-    borderColor: Colors.DIVIDER,
-  },
-  icon: {
-    margin: 16,
-    marginVertical: 24,
-    marginRight: 24,
-  },
-
-  bodyContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    marginTop: 24,
-    marginRight: 24,
-  },
-  textTitle: {
-    color: Colors.DARK_TEXT,
-    fontSize: 24,
-  },
-  textBody: {
-    color: Colors.DARK_MIDDLE,
-    fontSize: 16,
-    marginTop: 8,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    marginVertical: 24,
-  },
-});
-
-const buttonStyle = StyleSheet.create({
-  button: {},
-  text: {
-    fontWeight: Sizes.REGULAR,
-    fontSize: 16,
-    marginHorizontal: 8,
-  },
-});
-
 class TableCard extends Component {
+  static propTypes = {
+    size: PropTypes.oneOf(['small', 'normal']),
+  };
+  static defaultProps = {
+    size: 'normal',
+  };
+
   constructor() {
     super();
 
@@ -131,25 +95,28 @@ class TableCard extends Component {
         scanStatusText = 'Aucune table connectée';
     };
 
+    const { size } = this.props;
+    let test = stylesMulti;
+
     return (
       <View
         onPress={this._onPress}
         style={styles.cardContainer}
       >
-        <Icon name={iconName} size={30} color={iconColor} style={styles.icon} />
-        <View style={styles.bodyContainer}>
-          <Text style={styles.textTitle}>
+        <Icon name={iconName} size={30} color={iconColor} style={stylesMulti[size].icon} />
+        <View style={stylesMulti[size].bodyContainer}>
+          <Text style={stylesMulti[size].textTitle}>
             {scanStatusText}
           </Text>
-          <Text style={styles.textBody}>
+          <Text style={stylesMulti[size].textBody}>
             {managerStatusText}
           </Text>
-          <View style={styles.buttonContainer}>
+          <View style={stylesMulti[size].buttonContainer}>
             <CustomButton
               disabled={buttonDisabled}
               onPress={this._onPress}
               title={'Recherche automatique'}
-              style={buttonStyle}
+              style={buttonStyle[size]}
             />
           </View>
         </View>
@@ -161,6 +128,90 @@ class TableCard extends Component {
     Ble.startTableScan();
   }
 }
+
+const styles = StyleSheet.create({
+  cardContainer: {
+    alignSelf: 'stretch',
+    flexDirection: 'row',
+
+    borderBottomWidth: 1,
+    borderColor: Colors.DIVIDER,
+  },
+});
+
+const stylesMulti = {
+  small: StyleSheet.create({
+    icon: {
+      margin: 8,
+      marginVertical: 16,
+      marginRight: 16,
+    },
+    bodyContainer: {
+      flex: 1,
+      flexDirection: 'column',
+      marginTop: 16,
+      marginRight: 16,
+    },
+    textTitle: {
+      color: Colors.DARK_TEXT,
+      fontSize: 20,
+    },
+    textBody: {
+      color: Colors.DARK_MIDDLE,
+      fontSize: 14,
+      marginTop: 4,
+    },
+    buttonContainer: {
+      flexDirection: 'row',
+      marginVertical: 16,
+    },
+  }),
+  normal: StyleSheet.create({
+    icon: {
+      margin: 16,
+      marginVertical: 24,
+      marginRight: 24,
+    },
+    bodyContainer: {
+      flex: 1,
+      flexDirection: 'column',
+      marginTop: 24,
+      marginRight: 24,
+    },
+    textTitle: {
+      color: Colors.DARK_TEXT,
+      fontSize: 24,
+    },
+    textBody: {
+      color: Colors.DARK_MIDDLE,
+      fontSize: 16,
+      marginTop: 8,
+    },
+    buttonContainer: {
+      flexDirection: 'row',
+      marginVertical: 24,
+    },
+  }),
+};
+
+const buttonStyle = {
+  small: StyleSheet.create({
+    button: {},
+    text: {
+      fontWeight: Sizes.REGULAR,
+      fontSize: 14,
+      marginHorizontal: 8,
+    },
+  }),
+  normal: StyleSheet.create({
+    button: {},
+    text: {
+      fontWeight: Sizes.REGULAR,
+      fontSize: 16,
+      marginHorizontal: 8,
+    },
+  }),
+};
 
 function getFromStore(appState: indexReducerType) {
   return {

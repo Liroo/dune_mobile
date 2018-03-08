@@ -10,6 +10,8 @@ const Colors = {
   BLUETOOTH_ON: '#2196F3',
 
   DIVIDER: '#E7E7E7',
+
+  TRANSPARENT: 'rgba(0, 0, 0, 0)',
 };
 
 const Sizes = Object.freeze({
