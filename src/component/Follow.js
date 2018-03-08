@@ -45,7 +45,7 @@ export default class Follow extends Component {
 
                 <IndicatorViewPager
 					style={{flex:1, backgroundColor:'white'}}
-                    indicator={this._renderTabIndicator()}
+                    indicator={this._renderDotIndicator()}
                 >
                     <View style={styles.viewBack}>
                       <View style={styles.title1}>
@@ -125,7 +125,6 @@ const styles = StyleSheet.create({
     height: 85,
   },
   viewBack: {
-    flex:1,
     backgroundColor: '#51bfc4',
   },
   title1:{
