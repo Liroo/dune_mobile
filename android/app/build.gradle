@@ -64,6 +64,7 @@ dependencies {
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile project(':react-native-navigation')
     compile project(':react-native-ble-plx')
+    compile project(':react-native-svg')
     compile project(':react-native-vector-icons')
 }
 
