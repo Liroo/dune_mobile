@@ -6,7 +6,7 @@
          { "src": "./src", "expose": "src" },
          { "src": "./src/component", "expose": "component" },
          { "src": "./src/flux", "expose": "flux" },
-         { "src": "./src/utils", "expose": "utils" },
+         { "src": "./src/image", "expose": "image" },
        ]
     ]
   ]

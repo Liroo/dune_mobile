@@ -6,12 +6,22 @@ import { registerScreens } from 'src/screen';
 import store from 'flux/redux';
 import { Provider } from 'react-redux';
 
-import Ble from 'flux/Ble';
+import { BleManager } from 'react-native-ble-plx';
+import { initBle } from 'flux/ble/bleAction';
 
 registerScreens(store, Provider);
 
 export default class App {
   constructor() {
+    /*
+      TODO
+      Where this constructor should be created? mhhh
+      Is this the real place?
+      And actually, should we store it?
+      So many questions...
+    */
+    this.manager = new BleManager();
+    store.dispatch(initBle(this.manager));
 
     /*
       TODO

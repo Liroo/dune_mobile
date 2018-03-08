@@ -18,4 +18,5 @@ if (__DEV__) {
 
 const store = compose(applyMiddleware(...middlewares))(createStore)(reducer);
 
+export const dispatch = store.dispatch;
 export default store;

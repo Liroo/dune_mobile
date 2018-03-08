@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { View, Text, StyleSheet } from 'react-native';
 
-import TableCard from 'component/table/TableCard';
-
-const styles = StyleSheet.create({
-  rootContainer: {
-    flex: 1,
-  },
-});
+import { View, Text } from 'react-native';
 
 type Props = {};
 class Entry extends Component<Props> {
 
   render() {
     return (
-      <View style={styles.rootContainer}>
-        <TableCard />
+      <View>
         <Text>
-          {this.props.managerStatus}
+          {this.props.managerStatus}          
         </Text>
       </View>
     );
